@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Handmade Haven - Delicious homemade cookies, brownies, cupcakes, sandwiches & chicken snacks. Fresh baked treats in Pakistan.">
+  <meta name="keywords" content="homemade cookies, brownies, cupcakes, chicken bread, sandwiches, bakery Pakistan, fresh baked">
+  <meta name="author" content="Handmade Haven">
+  <meta name="robots" content="index, follow">
+  
+  <meta property="og:title" content="Handmade Haven | Fresh Homemade Treats">
+  <meta property="og:description" content="Delicious homemade cookies, brownies, cupcakes & savory snacks. Made fresh with love.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-bakery.jpg">
+  
+  <title>Handmade Haven | Cookies, Brownies, Cupcakes & More</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍪</text></svg>">
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-spinner"></div></div>
+
+  <header class="header" id="header">
+    <div class="header-container">
+      <a href="#home" class="logo">
+        <div>
+          <div class="logo-text">Handmade Haven</div>
+          <div class="logo-tagline">Baked with Love</div>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#collections" class="nav-link">Menu</a></li>
+          <li><a href="#products" class="nav-link">Order</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#cart" class="header-cart" aria-label="Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" data-page="home">
+    <!-- Hero Section -->
+    <section class="hero home-section" id="home">
+      <div class="hero-slider">
+        <div class="hero-slide active">
+          <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=1200" alt="Fresh homemade cookies and brownies">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=1200" alt="Delicious cupcakes">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-slide">
+          <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=1200" alt="Savory chicken snacks">
+          <div class="hero-overlay"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">Fresh Daily 🍪</span>
+          <h1 class="hero-title">Handmade Treats Baked With <span>Love</span></h1>
+          <p class="hero-subtitle">From gooey brownies to crispy cookies, fluffy cupcakes to savory chicken snacks — every bite is made fresh in our kitchen!</p>
+          <div class="hero-buttons">
+            <a href="#collections" class="btn btn-gold">View Menu</a>
+            <a href="#products" class="btn btn-secondary" style="border-color:#fff;color:#fff;">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-nav">
+        <button class="hero-dot active" data-slide="0"></button>
+        <button class="hero-dot" data-slide="1"></button>
+        <button class="hero-dot" data-slide="2"></button>
+      </div>
+    </section>
+
+    <!-- Menu Categories Section -->
+    <section class="section home-section" id="collections">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Menu</h2>
+          <p>Freshly baked treats & savory delights</p>
+        </div>
+        <div class="categories-preview">
+          <a href="#collection/cookies" class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600" alt="Cookies" loading="lazy">
+            <div class="category-overlay"><h4>Cookies</h4><span>4 Varieties</span></div>
+          </a>
+          <a href="#collection/brownies" class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600" alt="Brownies" loading="lazy">
+            <div class="category-overlay"><h4>Brownies</h4><span>4 Varieties</span></div>
+          </a>
+          <a href="#collection/cupcakes" class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600" alt="Cupcakes" loading="lazy">
+            <div class="category-overlay"><h4>Cupcakes</h4><span>7 Flavors</span></div>
+          </a>
+          <a href="#collection/savory" class="category-card fade-in">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600" alt="Savory Items" loading="lazy">
+            <div class="category-overlay"><h4>Savory</h4><span>12+ Items</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section bg-alt home-section">
+      <div class="container">
+        <div class="about-preview">
+          <div class="about-image fade-in">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800" alt="Handmade Haven Kitchen" loading="lazy">
+          </div>
+          <div class="about-content fade-in">
+            <h3>Baked Fresh With Love ❤️</h3>
+            <p>At Handmade Haven, every cookie, brownie, and cupcake is made from scratch using premium ingredients. Our savory snacks are prepared fresh daily — no preservatives, just pure homemade goodness!</p>
+            <div class="about-stats">
+              <div class="stat-item"><h4>2000+</h4><p>Happy Customers</p></div>
+              <div class="stat-item"><h4>27+</h4><p>Menu Items</p></div>
+              <div class="stat-item"><h4>Daily</h4><p>Fresh Baked</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section home-section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular Items</h2>
+          <p>Customer favorites from our menu</p>
+        </div>
+        <div class="categories-nav">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="cookies">Cookies</button>
+          <button class="category-btn" data-category="brownies">Brownies</button>
+          <button class="category-btn" data-category="cupcakes">Cupcakes</button>
+          <button class="category-btn" data-category="savory">Savory</button>
+        </div>
+        <div class="grid grid-4" id="productsGrid"></div>
+        <div class="products-footer"><a href="#collections" class="btn btn-primary">View Full Menu</a></div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials home-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+          <p>Real reviews from our treat lovers</p>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">The Choco Lava Muffins are absolutely amazing! So gooey and rich. And the Chicken Bread is perfect for parties. Best homemade treats in town!</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Customer" class="testimonial-avatar">
+              <div class="testimonial-info"><h4>Sana Malik</h4><span>Regular Customer</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="trust-badges">
+          <div class="trust-badge fade-in"><div class="trust-badge-icon">🏠</div><h4>100%</h4><p>Homemade</p></div>
+          <div class="trust-badge fade-in"><div class="trust-badge-icon">🍪</div><h4>Fresh</h4><p>Daily</p></div>
+          <div class="trust-badge fade-in"><div class="trust-badge-icon">⭐</div><h4>4.9/5</h4><p>Rating</p></div>
+          <div class="trust-badge fade-in"><div class="trust-badge-icon">🚚</div><h4>Fast</h4><p>Delivery</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact home-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Order Now</h2>
+          <p>Place your order or ask us anything</p>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>For bulk orders, custom requests, or any questions — we're here to help!</p>
+            <div class="contact-details">
+              <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Lahore, Pakistan</p></div></div>
+              <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Call Us</h4><p><a href="tel:+923001234567">+92 300 123 4567</a></p></div></div>
+              <div class="contact-item"><div class="contact-icon">⏰</div><div><h4>Hours</h4><p>10 AM - 9 PM Daily</p></div></div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+                <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" required></div>
+              </div>
+              <div class="form-group"><label for="message">Your Order / Message</label><textarea id="message" name="message" placeholder="E.g., 6 Choco Lava Muffins + 1 Brownie Slab for Saturday..." required></textarea></div>
+              <button type="submit" class="btn btn-primary">Send Order</button>
+            </form>
+            <a href="https://wa.me/923001234567" class="whatsapp-cta" target="_blank">💬 Order on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="logo-text">Handmade Haven</div>
+          <p>Fresh homemade treats delivered to your doorstep. Baked with love! 🍪</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook">f</a>
+            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">📷</a>
+            <a href="https://wa.me/923001234567" target="_blank" class="social-link" title="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Order Now</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#cart">My Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Our Menu</h4>
+          <ul>
+            <li><a href="#collection/cookies">🍪 Cookies</a></li>
+            <li><a href="#collection/brownies">🍫 Brownies</a></li>
+            <li><a href="#collection/cupcakes">🧁 Cupcakes</a></li>
+            <li><a href="#collection/savory">🍗 Savory Items</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>📍 Lahore, Pakistan</li>
+            <li>📞 <a href="tel:+923001234567">+92 300 123 4567</a></li>
+            <li>⏰ 10 AM - 9 PM Daily</li>
+            <li><a href="https://wa.me/923001234567" target="_blank" class="footer-whatsapp">💬 WhatsApp Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Handmade Haven. Made with ❤️ in Pakistan</p>
+        <div class="footer-bottom-links">
+          <span>🚚 Free delivery over RS 1,000</span>
+          <span>💵 Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="js/data/products.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/pages/collections.js"></script>
+  <script src="js/pages/collection.js"></script>
+  <script src="js/pages/product.js"></script>
+  <script src="js/pages/cart.js"></script>
+  <script src="js/pages/checkout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

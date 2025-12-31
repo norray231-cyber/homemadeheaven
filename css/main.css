@@ -1,0 +1,113 @@
+/* BIN-MASOOD Main Stylesheet */
+/* Premium Women's Unstitched Fabrics E-Commerce */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Core Styles */
+@import 'variables.css';
+@import 'base.css';
+
+/* Component Styles */
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/features.css';
+@import 'components/products.css';
+@import 'components/testimonials.css';
+@import 'components/blog.css';
+@import 'components/contact.css';
+@import 'components/footer.css';
+
+/* Page Styles */
+@import 'pages/collection.css';
+@import 'pages/product-detail.css';
+@import 'pages/cart.css';
+@import 'pages/utilities.css';
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: 999;
+  box-shadow: var(--shadow-lg);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Loading Animation */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Smooth Scroll Offset */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Main Content Area for SPA */
+#mainContent {
+  min-height: 50vh;
+}
+
+/* Hide home sections when on other pages */
+body.page-active .home-section {
+  display: none;
+}

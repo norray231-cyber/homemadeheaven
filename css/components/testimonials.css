@@ -1,0 +1,138 @@
+/* Testimonials Section */
+
+.testimonials {
+  background: var(--color-background-alt);
+}
+
+.testimonials-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote {
+  font-size: 60px;
+  color: var(--color-secondary);
+  line-height: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.testimonial-text {
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-secondary);
+}
+
+.testimonial-info h4 {
+  font-size: var(--text-base);
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.testimonial-info span {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+.testimonial-rating {
+  color: var(--color-secondary);
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-xl);
+}
+
+/* Testimonial Navigation */
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.testimonial-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.testimonial-nav-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  text-align: center;
+}
+
+.trust-badge-icon {
+  font-size: var(--text-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.trust-badge h4 {
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.trust-badge p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: var(--space-xl);
+  }
+
+  .testimonial-text {
+    font-size: var(--text-base);
+  }
+
+  .trust-badges {
+    gap: var(--space-xl);
+  }
+}
