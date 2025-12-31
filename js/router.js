@@ -13,7 +13,7 @@ class Router {
 
   init() {
     window.addEventListener('hashchange', () => this.handleRoute());
-    window.addEventListener('load', () => {
+    window.addEventListener('DOMContentLoaded', () => {
       this.saveHomeContent();
       this.handleRoute();
     });
@@ -22,6 +22,8 @@ class Router {
   saveHomeContent() {
     const mainContent = document.getElementById('mainContent');
     if (mainContent && !this.homeContent) {
+      // Ensure all home sections are visible before saving
+      document.querySelectorAll('.home-section').forEach(s => s.style.display = '');
       this.homeContent = mainContent.innerHTML;
     }
   }
@@ -38,7 +40,6 @@ class Router {
     const hash = window.location.hash.slice(1) || 'home';
     const [page, ...params] = hash.split('/');
     
-    // Home page sections (scroll to them)
     const homeSections = ['home', 'collections', 'products', 'testimonials', 'contact'];
     
     if (homeSections.includes(page) && params.length === 0) {
@@ -56,7 +57,6 @@ class Router {
       return;
     }
 
-    // Other pages (cart, checkout, collection, product)
     if (this.routes[page]) {
       this.isHomePage = false;
       this.routes[page](params);
@@ -66,17 +66,22 @@ class Router {
   }
 
   showHomePage() {
+    const mainContent = document.getElementById('mainContent');
+    
     if (!this.isHomePage && this.homeContent) {
-      const mainContent = document.getElementById('mainContent');
       mainContent.innerHTML = this.homeContent;
-      
-      // Re-initialize home page functionality
-      if (typeof renderHomeProducts === 'function') renderHomeProducts();
-      if (typeof initHeroSlider === 'function') initHeroSlider();
-      if (typeof initProductFilter === 'function') initProductFilter();
-      if (typeof initScrollAnimations === 'function') initScrollAnimations();
-      if (typeof initContactForm === 'function') initContactForm();
     }
+    
+    // Always ensure home sections are visible
+    document.querySelectorAll('.home-section').forEach(s => s.style.display = '');
+    
+    // Re-initialize home page functionality
+    if (typeof renderHomeProducts === 'function') renderHomeProducts();
+    if (typeof initHeroSlider === 'function') initHeroSlider();
+    if (typeof initProductFilter === 'function') initProductFilter();
+    if (typeof initScrollAnimations === 'function') initScrollAnimations();
+    if (typeof initContactForm === 'function') initContactForm();
+    
     this.isHomePage = true;
   }
 
