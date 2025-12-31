@@ -7,12 +7,23 @@ class Router {
     this.routes = {};
     this.currentPage = null;
     this.isHomePage = true;
+    this.homeContent = null;
     this.init();
   }
 
   init() {
     window.addEventListener('hashchange', () => this.handleRoute());
-    window.addEventListener('load', () => this.handleRoute());
+    window.addEventListener('load', () => {
+      this.saveHomeContent();
+      this.handleRoute();
+    });
+  }
+
+  saveHomeContent() {
+    const mainContent = document.getElementById('mainContent');
+    if (mainContent && !this.homeContent) {
+      this.homeContent = mainContent.innerHTML;
+    }
   }
 
   register(route, handler) {
@@ -31,18 +42,15 @@ class Router {
     const homeSections = ['home', 'collections', 'products', 'testimonials', 'contact'];
     
     if (homeSections.includes(page) && params.length === 0) {
-      // Show home page and scroll to section
       this.showHomePage();
       
       if (page === 'home') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        const section = document.getElementById(page);
-        if (section) {
-          setTimeout(() => {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        }
+        setTimeout(() => {
+          const section = document.getElementById(page);
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
       }
       this.updateActiveNav(page);
       return;
@@ -50,7 +58,7 @@ class Router {
 
     // Other pages (cart, checkout, collection, product)
     if (this.routes[page]) {
-      this.hideHomePage();
+      this.isHomePage = false;
       this.routes[page](params);
       window.scrollTo(0, 0);
       this.updateActiveNav(page);
@@ -58,26 +66,18 @@ class Router {
   }
 
   showHomePage() {
-    if (!this.isHomePage) {
-      // Restore home sections
-      document.querySelectorAll('.home-section').forEach(s => {
-        s.style.display = '';
-      });
-      
-      // Clear any dynamically added content (but keep home sections)
+    if (!this.isHomePage && this.homeContent) {
       const mainContent = document.getElementById('mainContent');
-      const dynamicContent = mainContent.querySelectorAll('section:not(.home-section)');
-      dynamicContent.forEach(el => el.remove());
+      mainContent.innerHTML = this.homeContent;
       
-      this.isHomePage = true;
+      // Re-initialize home page functionality
+      if (typeof renderHomeProducts === 'function') renderHomeProducts();
+      if (typeof initHeroSlider === 'function') initHeroSlider();
+      if (typeof initProductFilter === 'function') initProductFilter();
+      if (typeof initScrollAnimations === 'function') initScrollAnimations();
+      if (typeof initContactForm === 'function') initContactForm();
     }
-  }
-
-  hideHomePage() {
-    document.querySelectorAll('.home-section').forEach(s => {
-      s.style.display = 'none';
-    });
-    this.isHomePage = false;
+    this.isHomePage = true;
   }
 
   updateActiveNav(page) {
