@@ -69,7 +69,7 @@ function renderCartPage() {
             <div class="summary-divider"></div>
             <div class="summary-row total"><span>Total</span><span>${formatPrice(cart.getTotal())}</span></div>
             <button class="btn btn-primary btn-lg btn-block" onclick="router.navigate('checkout')">Proceed to Checkout</button>
-            <a href="https://wa.me/923001234567?text=${encodeURIComponent(generateWhatsAppOrder())}" class="whatsapp-checkout" target="_blank">💬 Quick Order via WhatsApp</a>
+            <a href="https://wa.me/923347942135?text=${encodeURIComponent(generateWhatsAppOrder())}" class="whatsapp-checkout" target="_blank">💬 Quick Order via WhatsApp</a>
             <div class="trust-icons"><span>🚚 Fast Delivery</span><span>💵 Cash on Delivery</span></div>
           </div>
         </div>

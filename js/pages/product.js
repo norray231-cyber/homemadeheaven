@@ -65,7 +65,7 @@ function renderProductPage(params) {
               <button class="btn btn-secondary btn-lg" onclick="buyProductNow('${product.id}')">Order Now</button>
             </div>
 
-            <a href="https://wa.me/923001234567?text=${encodeURIComponent(`Hi! I want to order: ${product.name} (${formatPrice(product.price)})`)}" class="whatsapp-order" target="_blank">💬 Order via WhatsApp</a>
+            <a href="https://wa.me/923347942135?text=${encodeURIComponent(`Hi! I want to order: ${product.name} (${formatPrice(product.price)})`)}" class="whatsapp-order" target="_blank">💬 Order via WhatsApp</a>
 
             <div class="product-details-accordion">
               <div class="accordion-item active">

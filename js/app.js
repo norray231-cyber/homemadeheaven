@@ -112,7 +112,7 @@ function initContactForm() {
     const message = form.querySelector('[name="message"]').value;
     
     const msg = `Hi! I'm ${name}.\nPhone: ${phone}\n\n${message}`;
-    window.open(`https://wa.me/923001234567?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/923347942135?text=${encodeURIComponent(msg)}`, '_blank');
     showNotification('Opening WhatsApp...');
     form.reset();
   });

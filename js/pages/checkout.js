@@ -121,7 +121,7 @@ function renderCheckoutPage() {
     cart.clearCart();
     
     // Open WhatsApp
-    const whatsappUrl = `https://wa.me/923001234567?text=${encodeURIComponent(msg)}`;
+    const whatsappUrl = `https://wa.me/923347942135?text=${encodeURIComponent(msg)}`;
     window.open(whatsappUrl, '_blank');
     
     // Show success and redirect
