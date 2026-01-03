@@ -1,26 +1,17 @@
 ;;
 ;; Domain:     handmadehaven.xyz
-;; Exported:   2025-12-31
+;; Updated:    2026-01-01
+;; For GitHub Pages hosting with HTTPS support
 ;;
-;; This zone file is configured for GitHub Pages hosting
-;; Import this file into Cloudflare DNS settings
+;; IMPORTANT: Set ALL records to "DNS only" (grey cloud) in Cloudflare
+;; GitHub needs direct DNS access to issue SSL certificates
 ;;
 
-;; SOA Record
-handmadehaven.xyz.	3600	IN	SOA	itzel.ns.cloudflare.com. dns.cloudflare.com. 2051884041 10000 2400 604800 3600
-
-;; NS Records (Cloudflare nameservers - keep these)
-handmadehaven.xyz.	86400	IN	NS	itzel.ns.cloudflare.com.
-handmadehaven.xyz.	86400	IN	NS	sonny.ns.cloudflare.com.
-
-;; A Records - GitHub Pages IPs (root domain)
+;; A Records - GitHub Pages IPs (root domain @)
 handmadehaven.xyz.	1	IN	A	185.199.108.153
 handmadehaven.xyz.	1	IN	A	185.199.109.153
 handmadehaven.xyz.	1	IN	A	185.199.110.153
 handmadehaven.xyz.	1	IN	A	185.199.111.153
 
-;; CNAME Record - www subdomain pointing to GitHub Pages
+;; CNAME Record - www subdomain
 www.handmadehaven.xyz.	1	IN	CNAME	norray231-cyber.github.io.
-
-;; TXT Records (keep existing DMARC)
-_dmarc.handmadehaven.xyz.	1	IN	TXT	"v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"

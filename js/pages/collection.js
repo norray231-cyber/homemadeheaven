@@ -27,6 +27,8 @@ function renderCollectionPage(params) {
           <div class="collection-stats">
             <span>${products.length} Items</span>
             <span>•</span>
+            <span>Delivery in Lahore Only</span>
+            <span>•</span>
             <span>Free Delivery over RS 1,000</span>
           </div>
         </div>
