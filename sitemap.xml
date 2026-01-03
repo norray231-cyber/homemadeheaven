@@ -1,38 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://handmadehaven.xyz/</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=1200</image:loc>
+      <image:title>Handmade Haven - Fresh Homemade Treats</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#collections</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#collection/cookies</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600</image:loc>
+      <image:title>Homemade Cookies - Classic, Chocolate, Red Velvet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#collection/brownies</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600</image:loc>
+      <image:title>Fudgy Brownies - Chococo, Oreo, D'Choco</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#collection/cupcakes</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600</image:loc>
+      <image:title>Cupcakes - Choco Lava, KitKat, Hazel Bliss</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#collection/savory</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600</image:loc>
+      <image:title>Savory Snacks - Grillwich, Chicken Bread, Dynamite</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://handmadehaven.xyz/#contact</loc>
     <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://handmadehaven.xyz/#cart</loc>
+    <lastmod>2026-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
