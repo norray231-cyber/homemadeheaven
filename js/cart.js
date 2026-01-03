@@ -41,7 +41,7 @@ class ShoppingCart {
   getItems() { return this.items; }
   getItemCount() { return this.items.reduce((s, i) => s + i.quantity, 0); }
   getSubtotal() { return this.items.reduce((s, i) => s + i.price * i.quantity, 0); }
-  getShipping() { return this.getSubtotal() >= 1000 ? 0 : 100; }
+  getShipping() { return this.getSubtotal() >= 1000 ? 0 : 250; }
   getTotal() { return this.getSubtotal() + this.getShipping(); }
   clearCart() { this.items = []; this.save(); }
   subscribe(cb) { this.listeners.push(cb); }
